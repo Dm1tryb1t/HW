@@ -15,6 +15,12 @@ public:
     explicit Form(QWidget *parent = nullptr);
     ~Form();
 
+signals:
+    void firstWindow();
+
+private slots:
+    void on_pushButton_clicked();
+
 private:
     Ui::Form *ui;
 };

@@ -3,10 +3,11 @@
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
+    , ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    connect(&form, &Form::firstWindow, this, &MainWindow::show);
 }
+
 
 MainWindow::~MainWindow()
 {

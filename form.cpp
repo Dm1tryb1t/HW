@@ -12,3 +12,10 @@ Form::~Form()
 {
     delete ui;
 }
+
+void Form::on_pushButton_clicked()
+{
+    this->close();
+    emit firstWindow();
+}
+
