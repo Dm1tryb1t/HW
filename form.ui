@@ -6,49 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>852</width>
-    <height>620</height>
+    <width>836</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout_2">
-   <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout">
-     <item row="3" column="0">
-      <widget class="QPushButton" name="pushButton">
-       <property name="maximumSize">
-        <size>
-         <width>300</width>
-         <height>16777215</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>PointingHandCursor</cursorShape>
-       </property>
-       <property name="text">
-        <string>Return to main window</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
       <widget class="QLabel" name="label">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>0</height>
-        </size>
-       </property>
        <property name="maximumSize">
         <size>
-         <width>1100000</width>
-         <height>200</height>
+         <width>16777215</width>
+         <height>150</height>
         </size>
        </property>
        <property name="font">
@@ -66,15 +39,39 @@
        </property>
       </widget>
      </item>
-     <item row="2" column="0">
+     <item>
       <widget class="QLabel" name="label_2">
        <property name="font">
         <font>
          <pointsize>14</pointsize>
+         <kerning>true</kerning>
+         <fontweight>Medium</fontweight>
         </font>
        </property>
+       <property name="cursor">
+        <cursorShape>IBeamCursor</cursorShape>
+       </property>
        <property name="text">
-        <string>Тут в столбик будут пути к файлам</string>
+        <string>Здесь будут пути к файлам</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="maximumSize">
+        <size>
+         <width>350</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="text">
+        <string>Return to main window</string>
        </property>
       </widget>
      </item>
