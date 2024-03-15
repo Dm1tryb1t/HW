@@ -11,11 +11,13 @@ CONFIG += c++17
 SOURCES += \
     form.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    solver.cpp
 
 HEADERS += \
     form.h \
-    mainwindow.h
+    mainwindow.h \
+    solver.h
 
 FORMS += \
     form.ui \
@@ -25,3 +27,6 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+DISTFILES += \
+    BGC.png

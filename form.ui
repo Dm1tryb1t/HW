@@ -59,16 +59,27 @@
        </property>
       </widget>
      </item>
-     <item>
+     <item alignment="Qt::AlignRight">
       <widget class="QPushButton" name="pushButton">
        <property name="maximumSize">
         <size>
          <width>350</width>
-         <height>16777215</height>
+         <height>35</height>
         </size>
        </property>
        <property name="cursor">
         <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: black;
+	background-color: rgb(182, 179, 255);
+	border-radius: 4 
+}
+
+QPushButton::hover{
+	Background-color: rgb(115, 110, 255)
+}</string>
        </property>
        <property name="text">
         <string>Return to main window</string>
