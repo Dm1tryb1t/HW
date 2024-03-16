@@ -52,7 +52,7 @@
         <cursorShape>IBeamCursor</cursorShape>
        </property>
        <property name="text">
-        <string>Здесь будут пути к файлам</string>
+        <string/>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>

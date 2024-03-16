@@ -14,6 +14,7 @@ class Form : public QWidget
 public:
     explicit Form(QWidget *parent = nullptr);
     ~Form();
+    void setAns(QString);
 
 signals:
     void firstWindow();

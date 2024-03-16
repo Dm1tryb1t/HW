@@ -13,6 +13,10 @@ Form::~Form()
     delete ui;
 }
 
+void Form::setAns(QString str) {
+    ui->label_2->setText(str);
+}
+
 void Form::on_pushButton_clicked()
 {
     this->close();

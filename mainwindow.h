@@ -6,6 +6,8 @@
 #include <QMainWindow>
 #include <QDir>
 #include <QFileDialog>
+#include <QUrl>
+#include <QDesktopServices>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
