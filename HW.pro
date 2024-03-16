@@ -29,4 +29,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 DISTFILES += \
-    BGC.png
+    BGC.png \
+    provider.png
+
+RESOURCES += \
+    rrr.qrc

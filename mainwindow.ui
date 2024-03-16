@@ -44,7 +44,7 @@
          </font>
         </property>
         <property name="cursor">
-         <cursorShape>ForbiddenCursor</cursorShape>
+         <cursorShape>WhatsThisCursor</cursorShape>
         </property>
         <property name="text">
          <string>Max File Finder</string>
@@ -74,7 +74,7 @@
          </font>
         </property>
         <property name="cursor">
-         <cursorShape>SizeAllCursor</cursorShape>
+         <cursorShape>WhatsThisCursor</cursorShape>
         </property>
         <property name="styleSheet">
          <string notr="true">QLabel {
@@ -103,7 +103,7 @@
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>450</height>
+          <height>425</height>
          </size>
         </property>
        </spacer>
@@ -123,16 +123,16 @@
           </property>
          </spacer>
         </item>
-        <item>
+        <item alignment="Qt::AlignTop">
          <widget class="QLineEdit" name="lineEdit">
           <property name="minimumSize">
            <size>
             <width>400</width>
-            <height>30</height>
+            <height>40</height>
            </size>
           </property>
           <property name="cursor">
-           <cursorShape>ClosedHandCursor</cursorShape>
+           <cursorShape>BusyCursor</cursorShape>
           </property>
           <property name="mouseTracking">
            <bool>false</bool>
@@ -145,12 +145,41 @@
           </property>
          </widget>
         </item>
-        <item>
+        <item alignment="Qt::AlignTop">
+         <widget class="QToolButton" name="toolButton">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>40</height>
+           </size>
+          </property>
+          <property name="cursor">
+           <cursorShape>ForbiddenCursor</cursorShape>
+          </property>
+          <property name="text">
+           <string>view</string>
+          </property>
+          <property name="icon">
+           <iconset resource="rrr.qrc">
+            <normaloff>:/icons/provider.png</normaloff>:/icons/provider.png</iconset>
+          </property>
+          <property name="toolButtonStyle">
+           <enum>Qt::ToolButtonTextUnderIcon</enum>
+          </property>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignTop">
          <widget class="QPushButton" name="pushButton">
           <property name="minimumSize">
            <size>
             <width>200</width>
-            <height>30</height>
+            <height>40</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -165,7 +194,7 @@
            </font>
           </property>
           <property name="cursor">
-           <cursorShape>IBeamCursor</cursorShape>
+           <cursorShape>ForbiddenCursor</cursorShape>
           </property>
           <property name="layoutDirection">
            <enum>Qt::LeftToRight</enum>
@@ -206,6 +235,8 @@ QPushButton::hover{
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="rrr.qrc"/>
+ </resources>
  <connections/>
 </ui>

@@ -24,3 +24,10 @@ void MainWindow::on_pushButton_clicked()
     this->close();
 }
 
+
+void MainWindow::on_toolButton_clicked()
+{
+    QString FileName = QFileDialog::getExistingDirectory(this, "Choose directory", "/", QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks);
+    // QUrl url = QUrl::QUrl("file:///" + FileName);
+}
+

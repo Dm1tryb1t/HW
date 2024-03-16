@@ -3,8 +3,9 @@
 
 #include "form.h"
 
-
 #include <QMainWindow>
+#include <QDir>
+#include <QFileDialog>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,6 +23,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+
+    void on_toolButton_clicked();
 
 private:
     Ui::MainWindow *ui;
