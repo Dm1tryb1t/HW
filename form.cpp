@@ -19,6 +19,7 @@ void Form::setAns(QString str) {
 
 void Form::on_pushButton_clicked()
 {
+    ui->label_2->setText("");
     this->close();
     emit firstWindow();
 }
