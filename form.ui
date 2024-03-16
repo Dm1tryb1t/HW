@@ -11,12 +11,21 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>AHA</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="rrr.qrc">
+    <normaloff>:/icons/icon.png</normaloff>:/icons/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget {
+	background-color: rgb(255, 255, 255);
+}</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
+     <item alignment="Qt::AlignTop">
       <widget class="QLabel" name="label">
        <property name="maximumSize">
         <size>
@@ -39,52 +48,63 @@
        </property>
       </widget>
      </item>
-     <item>
-      <widget class="QLabel" name="label_2">
+     <item alignment="Qt::AlignTop">
+      <widget class="QTextEdit" name="textEdit">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>400</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
          <width>16777215</width>
-         <height>200</height>
+         <height>16777215</height>
         </size>
        </property>
        <property name="font">
         <font>
+         <family>Dubai</family>
          <pointsize>14</pointsize>
-         <kerning>true</kerning>
-         <fontweight>Medium</fontweight>
+         <italic>true</italic>
         </font>
        </property>
-       <property name="cursor">
+       <property name="cursor" stdset="0">
         <cursorShape>IBeamCursor</cursorShape>
        </property>
-       <property name="mouseTracking">
-        <bool>true</bool>
+       <property name="styleSheet">
+        <string notr="true">QTextEdit {
+	border: none;
+}</string>
        </property>
-       <property name="midLineWidth">
-        <number>1</number>
-       </property>
-       <property name="text">
+       <property name="documentTitle">
         <string/>
        </property>
-       <property name="textFormat">
-        <enum>Qt::AutoText</enum>
+       <property name="lineWrapColumnOrWidth">
+        <number>2</number>
        </property>
-       <property name="scaledContents">
+       <property name="readOnly">
         <bool>true</bool>
        </property>
-       <property name="alignment">
-        <set>Qt::AlignHCenter|Qt::AlignTop</set>
+       <property name="textInteractionFlags">
+        <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
        </property>
-       <property name="openExternalLinks">
-        <bool>true</bool>
+       <property name="placeholderText">
+        <string>No files here</string>
        </property>
       </widget>
      </item>
      <item alignment="Qt::AlignRight">
       <widget class="QPushButton" name="pushButton">
+       <property name="minimumSize">
+        <size>
+         <width>180</width>
+         <height>35</height>
+        </size>
+       </property>
        <property name="maximumSize">
         <size>
-         <width>350</width>
+         <width>180</width>
          <height>35</height>
         </size>
        </property>
@@ -111,6 +131,8 @@ QPushButton::hover{
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="rrr.qrc"/>
+ </resources>
  <connections/>
 </ui>

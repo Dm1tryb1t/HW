@@ -45,9 +45,18 @@ Solver::Solver(QString dirPATH) {
             return file1.size() > file2.size();
         });
         for (int i = 0; i < 5; ++i) {
-            answer += "Path to file: " + fileslst[i].absoluteFilePath() + "    It's weight: " + QString::number(fileslst[i].size()) + " bytes\n";
+            long double sz = fileslst[i].size();
+            QString szType = "bytes";
+            if (sz > static_cast<long double>(1 << 20)) {
+                sz /= (1 << 20);
+                szType = "Megabytes";
+            } else if (sz > static_cast<long double>(1 << 10)) {
+                sz /= (1 << 10);
+                szType = "Kilobytes";
+            }
+            answer += "Path to file: " + fileslst[i].absoluteFilePath() + "    It's weight: " + QString::number(sz, 'f', 3) + ' ' + szType + '\n';
         }
-    } else {
+    } /* else {
         answer += "no such directory or zero files in it";
-    }
+    } */
 }

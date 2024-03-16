@@ -18,6 +18,7 @@ public:
 
 signals:
     void firstWindow();
+    void firstWindowMaximized();
 
 private slots:
     void on_pushButton_clicked();

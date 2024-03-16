@@ -6,7 +6,8 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow) {
     ui->setupUi(this);
-    connect(&form, &Form::firstWindow, this, &MainWindow::showMaximized);
+    connect(&form, &Form::firstWindowMaximized, this, &MainWindow::showMaximized);
+    connect(&form, &Form::firstWindow, this, &MainWindow::show);
 }
 
 
@@ -20,7 +21,11 @@ void MainWindow::on_pushButton_clicked()
     QString dir = ui->lineEdit->text();
     // QString dir("C:\\Users\\Dmitry\\Desktop\\github\\HW");
     Solver solve(dir);
-    form.showMaximized();
+    if (this->isMaximized()) {
+        form.showMaximized();
+    } else {
+        form.show();
+    }
     form.setAns(solve.getAns());
     ui->lineEdit->setText("");
     this->close();

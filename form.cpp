@@ -14,13 +14,18 @@ Form::~Form()
 }
 
 void Form::setAns(QString str) {
-    ui->label_2->setText(str);
+    ui->textEdit->setText(str);
 }
 
 void Form::on_pushButton_clicked()
 {
-    ui->label_2->setText("");
+    ui->textEdit->setText("");
+    if (this->isMaximized()) {
+        emit firstWindowMaximized();
+    } else {
+        emit firstWindow();
+    }
     this->close();
-    emit firstWindow();
+
 }
 

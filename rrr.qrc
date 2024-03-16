@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/icons">
         <file>provider.png</file>
+        <file>BGC.png</file>
+        <file>icon.png</file>
     </qresource>
 </RCC>
