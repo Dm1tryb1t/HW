@@ -1,6 +1,10 @@
 #include "solver.h"
 #include "mainwindow.h"
 
+Solver::Solver() {
+    answer = "";
+}
+
 QString Solver::getAns() {
     return answer;
 }
@@ -15,10 +19,18 @@ void get_fileslst_Helper(QFileInfoList& fileslist, const QString& PATH) {
         fileslist.append(newfileslist[i]);
     }
     QFileInfoList dirslist = dir.entryInfoList();
+    if (dirslist.length() > 500) {
+        throw std::exception();
+    }
     for (int i = 2; i < dirslist.length(); ++i) {
+        if (fileslist.length() > 0) {
+            std::sort(fileslist.begin(), fileslist.end(), [](QFileInfo file1, QFileInfo file2) {
+                return file1.size() > file2.size();
+            });
+            fileslist.resize(((5 < fileslist.length())? 5 : fileslist.length()));
+        }
         get_fileslst_Helper(fileslist, dirslist[i].absoluteFilePath());
     }
-
 }
 
 QFileInfoList get_fileslst(const QString& PATH) {
@@ -31,13 +43,22 @@ QFileInfoList get_fileslst(const QString& PATH) {
     dir1.setFilter(QDir::Files);
     QFileInfoList fileslist = dir1.entryInfoList();
     QFileInfoList dirslist = dir.entryInfoList();
+    if (dirslist.length() > 500) {
+        throw std::exception();
+    }
     for (int i = 2; i < dirslist.length(); ++i) {
         get_fileslst_Helper(fileslist, dirslist[i].absoluteFilePath());
+        if (fileslist.length() > 0) {
+            std::sort(fileslist.begin(), fileslist.end(), [](QFileInfo file1, QFileInfo file2) {
+                return file1.size() > file2.size();
+            });
+            fileslist.resize(((5 < fileslist.length())? 5 : fileslist.length()));
+        }
     }
     return fileslist;
 }
 
-Solver::Solver(QString dirPATH) {
+void Solver::solve (QString dirPATH) {
     answer = "";
     QFileInfoList fileslst = get_fileslst(dirPATH);
     if (fileslst.length() > 0) {
@@ -57,6 +78,6 @@ Solver::Solver(QString dirPATH) {
             answer += "Path to file: " + fileslst[i].absoluteFilePath() + "    It's weight: " + QString::number(sz, 'f', 3) + ' ' + szType + '\n';
         }
     } /* else {
-        answer += "no such directory or zero files in it";
+    answer += "no such directory or zero files in it";
     } */
 }

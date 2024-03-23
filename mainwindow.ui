@@ -92,7 +92,7 @@
 }</string>
         </property>
         <property name="text">
-         <string>Приложение для поиска пяти самых тяжелых файлов в указанной директории и ее поддирректориях</string>
+         <string>App for searching 5 files with max weight</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignHCenter|Qt::AlignTop</set>
@@ -154,7 +154,7 @@
            <string/>
           </property>
           <property name="placeholderText">
-           <string>Введите путь к файлам</string>
+           <string>Enter the directory's path</string>
           </property>
          </widget>
         </item>
@@ -227,7 +227,7 @@ QPushButton::hover{
 }</string>
           </property>
           <property name="text">
-           <string>обработать</string>
+           <string>777</string>
           </property>
          </widget>
         </item>

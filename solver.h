@@ -11,8 +11,9 @@ class Solver
 {
     QString answer;
 public:
-    Solver(QString dirPATH);
+    Solver();
     QString getAns();
+    void solve(QString);
 };
 
 #endif // SOLVER_H

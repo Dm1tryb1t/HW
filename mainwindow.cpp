@@ -20,15 +20,22 @@ void MainWindow::on_pushButton_clicked()
 {
     QString dir = ui->lineEdit->text();
     // QString dir("C:\\Users\\Dmitry\\Desktop\\github\\HW");
-    Solver solve(dir);
-    if (this->isMaximized()) {
-        form.showMaximized();
-    } else {
-        form.show();
+    try {
+        Solver solve;
+        solve.solve(dir);
+        if (this->isMaximized()) {
+            form.showMaximized();
+        } else {
+            form.show();
+        }
+        form.setAns(solve.getAns());
+        ui->lineEdit->setText("");
+        this->close();
+    } catch(const std::exception&) {
+        error.show();
     }
-    form.setAns(solve.getAns());
-    ui->lineEdit->setText("");
-    this->close();
+
+
 }
 
 

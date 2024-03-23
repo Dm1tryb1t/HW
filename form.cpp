@@ -29,3 +29,9 @@ void Form::on_pushButton_clicked()
 
 }
 
+
+void Form::on_pushButton_2_clicked()
+{
+    this->close();
+}
+

@@ -2,6 +2,9 @@
 #define MAINWINDOW_H
 
 #include "form.h"
+#include "error.h"
+
+#include <algorithm>
 
 #include <QMainWindow>
 #include <QDir>
@@ -31,5 +34,6 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Form form;
+    Error error;
 };
 #endif // MAINWINDOW_H

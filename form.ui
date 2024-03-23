@@ -127,6 +127,39 @@ QPushButton::hover{
        </property>
       </widget>
      </item>
+     <item alignment="Qt::AlignRight">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>180</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>180</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton {
+	color: black;
+	background-color: rgb(182, 179, 255);
+	border-radius: 4 
+}
+
+QPushButton::hover{
+	Background-color: rgb(115, 110, 255)
+}</string>
+       </property>
+       <property name="text">
+        <string>Exit</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
   </layout>
